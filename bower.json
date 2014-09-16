@@ -1,0 +1,21 @@
+{
+  "name": "ngmarkdown",
+  "version": "0.0.1",
+  "homepage": "https://github.com/whoisandie/ngmarkdown",
+  "authors": [
+    "Bhargav Anand <rjn143@gmail.com>"
+  ],
+  "description": "Markdown editor using AngularJS and CodeMirror",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.25"
+  }
+}

@@ -15,8 +15,8 @@ gulp.task('annotate', ['jshint'], function(){
       single_quotes: true
     }))
     .pipe(plugins.wrapper({
-      header: '(function(){',
-      footer: '}();'
+      header: '(function(){\n',
+      footer: '\n})();'
     }))
     .pipe(gulp.dest('dist'));
 });
