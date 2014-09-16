@@ -1,0 +1,25 @@
+{
+  "name": "ngmarkdown",
+  "version": "0.0.1",
+  "description": "Markdown editor using AngularJS and CodeMirror",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whoisandie/ngmarkdown.git"
+  },
+  "author": "Bhargav Anand",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whoisandie/ngmarkdown/issues"
+  },
+  "devDependencies": {
+    "jshint-stylish": "~0.4.0",
+    "gulp-wrapper": "~0.1.5",
+    "gulp": "~3.8.8",
+    "gulp-ng-annotate": "~0.3.2",
+    "gulp-jshint": "~1.8.4"
+  }
+}
