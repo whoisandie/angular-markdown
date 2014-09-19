@@ -18,8 +18,10 @@
   "smarttabs": true,
   "multistr": true,
   "globals": {
-    "jQuery": true,
     "angular": true,
+    "marked": true,
+    "CodeMirror": true,
+    "Editor": true,
     "strict": true
   }
 }
