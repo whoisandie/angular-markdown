@@ -49,7 +49,7 @@ angular.module('ngMarkdown').directive('markdown', function($markdown){
     replace: true,
     template: '<div class="ng-markdown"><textarea></textarea></div>',
     link: function(scope, elem){
-      $markdown({
+      var md = $markdown({
         element: elem
       });
     }
