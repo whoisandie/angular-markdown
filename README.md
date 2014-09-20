@@ -1,12 +1,12 @@
-ngMarkdown
-----------
+ngMarkdown (βeta)
+
+------
 
 > Full-Blown-Fully-Configurable Markdown Service
 
 ##Overview
-----------
 An [AngularJS](https://angularjs.org) module that integrates a full-blown, fully configurable Markdown editor
-into your angularjs applications. Contains a simple directive `<markdown></markdown>` and a service `$markdown` which can be configurable in the config phase of your application.
+into your angularjs applications. Contains a simple directive and a service.
 
 ngMarkdown isn't a WYSISYG editor. Its just a plain text markdown editor, with a few extra few features enabled.
 Depends on [CodeMirror](https://codemirror.net)(customized, minimized & built into the project), [Marked](https://github.com/chjj/marked) & [AngularJS](https://angularjs.prg) projects.
@@ -24,7 +24,7 @@ Inspiration from [Lepture](https://github.com/lepture/editor) was the kickstart 
 $ bower install ngMarkdown -save
 ```
 
-- Include the required libraries in your applications index file
+- Include the required libraries in your applications index page
 
 ```html
 <script src="bower_components/angular/angular.js"></script>
@@ -36,6 +36,21 @@ $ bower install ngMarkdown -save
 ```javascript
 var app = angular.module('app', ['ngMarkdown']);
 ```
+
+- To configure the editor on config phase, use the `$markdownProvider`
+
+```javascript
+app.config(function($markdownProvider){
+  $markdownProvider.config({
+    gfm: false,
+    toolbar: false,
+    statusbar: false,
+    ...
+  });
+});
+```
+
+Options will be coming soon.
 
 - Use the markdown directive where ever you want the editor to be placed
 
