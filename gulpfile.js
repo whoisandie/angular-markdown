@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    karma = require('karma').server,
     plugins = require('gulp-load-plugins')();
 
 gulp.task('jshint', function(){
@@ -23,10 +24,10 @@ gulp.task('annotate', ['jshint'], function(){
 
 gulp.task('concat', function(){
   return gulp.src([
-      'src/codemirror.js',
-      'src/continuelist.js',
-      'src/xml.js',
-      'src/markdown.js',
+      'src/codemirror/codemirror.js',
+      'src/codemirror/continuelist.js',
+      'src/codemirror/xml.js',
+      'src/codemirror/markdown.js',
       'src/editor.js',
       'src/angular-markdown.js'
     ])
@@ -38,9 +39,17 @@ gulp.task('concat', function(){
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('karma', function(done){
+  return karma.start({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done);
+});
+
 gulp.task('watch', function(){
-  gulp.watch(['src/codemirror.js', 'src/continuelist.js', 'src/xml.js', 'src/markdown.js', 'src/editor.js',], ['concat']);
+  gulp.watch(['src/codemirror/continuelist.js', 'src/editor.js',], ['concat']);
   gulp.watch('src/angular-markdown.js', ['annotate', 'concat']);
 });
 
 gulp.task('default', ['concat', 'watch']);
+gulp.task('test', ['karma']);
