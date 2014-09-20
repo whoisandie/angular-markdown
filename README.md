@@ -2,8 +2,8 @@
 > Full-Blown-Fully-Configurable Markdown Service
 
 ##Overview
-An [AngularJS](https://angularjs.org) module that integrates a full-blown, fully configurable Markdown editor
-into your angularjs applications. Contains a simple directive and a service.
+An [AngularJS](https://angularjs.org) module that integrates a full-blown, fully configurable markdown service
+for your angularjs apps. Contains a simple directive and a service.
 
 ngMarkdown isn't a WYSISYG editor. Its just a plain text markdown editor, with a few extra few features enabled.
 Depends on [CodeMirror](https://codemirror.net)(customized, minimized & built into the project), [Marked](https://github.com/chjj/marked) & [AngularJS](https://angularjs.prg) projects.
