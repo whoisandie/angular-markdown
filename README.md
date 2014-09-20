@@ -1,7 +1,4 @@
-ngMarkdown (βeta)
-
-------
-
+#ngMarkdown (βeta)
 > Full-Blown-Fully-Configurable Markdown Service
 
 ##Overview
