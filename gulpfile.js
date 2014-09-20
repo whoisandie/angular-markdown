@@ -33,7 +33,7 @@ gulp.task('concat', function(){
     ])
     .pipe(plugins.concat('angular-markdown.js'))
     .pipe(plugins.wrapper({
-      header: '(function(){\n',
+      header: '(function(){\n\t',
       footer: '\n})();'
     }))
     .pipe(gulp.dest('dist'));
@@ -48,12 +48,14 @@ gulp.task('minify', function(){
     'src/editor.js',
     'src/angular-markdown.js'
   ])
-    .pipe(plugins.concat('angular-markdown.js'))
+    .pipe(plugins.concat('angular-markdown.min.js'))
     .pipe(plugins.wrapper({
       header: '(function(){\n',
       footer: '\n})();'
     }))
-    .pipe(plugins.uglify())
+    .pipe(plugins.uglify({
+      mangle: false
+    }))
     .pipe(gulp.dest('dist'));
 });
 
