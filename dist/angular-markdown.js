@@ -6812,11 +6812,11 @@ Editor.prototype._render = function(){
   });
 
   if(this.options.toolbar !== false){
-    console.log('Create toolbar here');
+    //console.log('Create toolbar here');
   }
 
   if(this.options.statusbar !== false){
-    console.log('Creating statusbar here');
+    //console.log('Creating statusbar here');
   }
 
   this.codemirror.refresh();
@@ -6978,7 +6978,7 @@ angular.module('ngMarkdown').directive('markdown', function($markdown){
     replace: true,
     template: '<div class="ng-markdown"><textarea></textarea></div>',
     link: function(scope, elem){
-      $markdown({
+      var md = $markdown({
         element: elem
       });
     }
