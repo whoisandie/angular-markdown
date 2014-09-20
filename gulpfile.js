@@ -39,6 +39,24 @@ gulp.task('concat', function(){
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('minify', function(){
+  return gulp.src([
+    'src/codemirror/codemirror.js',
+    'src/codemirror/continuelist.js',
+    'src/codemirror/xml.js',
+    'src/codemirror/markdown.js',
+    'src/editor.js',
+    'src/angular-markdown.js'
+  ])
+    .pipe(plugins.concat('angular-markdown.js'))
+    .pipe(plugins.wrapper({
+      header: '(function(){\n',
+      footer: '\n})();'
+    }))
+    .pipe(plugins.uglify())
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('karma', function(done){
   return karma.start({
     configFile: __dirname + '/karma.conf.js',
@@ -46,10 +64,12 @@ gulp.task('karma', function(done){
   }, done);
 });
 
+
 gulp.task('watch', function(){
   gulp.watch(['src/codemirror/continuelist.js', 'src/editor.js',], ['concat']);
   gulp.watch('src/angular-markdown.js', ['annotate', 'concat']);
 });
 
 gulp.task('default', ['concat', 'watch']);
+gulp.task('build', ['concat', 'minify']);
 gulp.task('test', ['karma']);
