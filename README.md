@@ -12,7 +12,6 @@ Inspiration from [Lepture](https://github.com/lepture/editor) was the kickstart 
 
 **NOTE:** The module is still under its beta development. Please keep checking the master branch for changes.
 
----------
 
 ## Quickstart
 - Install ngMarkdown using bower
@@ -24,8 +23,11 @@ $ bower install ngMarkdown -save
 - Include the required libraries in your applications index page
 
 ```html
+<link rel="stylesheet" href="bower_components/angular-markdown/angular-markdown.css"/>
+
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/marked/lib/marked.js"></script>
+<script src="bower_components/angular-markdown/angular-markdown.js"></script>
 ```
 
 - Inject the module into your angularjs application
@@ -57,7 +59,6 @@ Options will be coming soon.
 </body>
 ```
 
----------
 
 ## Developers
 Clone the repo using `git clone https://github.com/whoisandie/ngMarkdown.git`.
@@ -82,7 +83,6 @@ As mentioned earlied, all the module is tested by karma. Run the tests using
 $ gulp test
 ```
 
----------
 
 ##Contribution
 Want to make a contribution ? Cool! Fork the repo, tweak, add your changes, submit a pull request :)
