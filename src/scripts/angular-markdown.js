@@ -18,11 +18,17 @@ angular.module('ngMarkdown').provider('$markdown', function(){
   };
 
   // Inject all required providers in the $get function
-  this.$get = function(){
+  this.$get = function($window){
     var defaults = this.defaults, EditorFactory;
     EditorFactory = function(config){
       var options = angular.extend({}, defaults, config), $editor;
       $editor = new Editor(options);
+
+      $editor.html = function(text){
+        if($window.marked){
+          return marked(text);
+        }
+      };
 
       return $editor;
     };
