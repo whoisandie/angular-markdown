@@ -18,9 +18,9 @@ module.exports = function(config) {
       'vendor/angular/angular.js',
       'vendor/marked/lib/marked.js',
       'vendor/angular-mocks/angular-mocks.js',
-      'src/codemirror/*.js',
-      'src/editor.js',
-      'src/angular-markdown.js',
+      'src/scripts/codemirror/*.js',
+      'src/scripts/editor.js',
+      'src/scriptsangular-markdown.js',
       'test/*.spec.js'
     ],
 
@@ -32,8 +32,7 @@ module.exports = function(config) {
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-    },
+    preprocessors: {},
 
 
     // test results reporter to use

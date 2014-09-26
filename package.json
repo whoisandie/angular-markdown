@@ -16,17 +16,17 @@
     "url": "https://github.com/whoisandie/ngmarkdown/issues"
   },
   "devDependencies": {
-    "jshint-stylish": "~0.4.0",
-    "gulp-wrapper": "~0.1.5",
     "gulp": "~3.8.8",
+    "gulp-load-plugins": "~0.6.0",
+    "gulp-wrapper": "~0.1.5",
     "gulp-ng-annotate": "~0.3.2",
     "gulp-jshint": "~1.8.4",
-    "gulp-load-plugins": "~0.6.0",
     "gulp-concat": "~2.4.1",
     "gulp-uglify": "~1.0.1",
     "karma": "~0.12.23",
     "karma-jasmine": "~0.1.5",
     "karma-phantomjs-launcher": "~0.1.4",
-    "karma-spec-reporter": "0.0.13"
+    "karma-spec-reporter": "0.0.13",
+    "jshint-stylish": "~1.0.0"
   }
 }
