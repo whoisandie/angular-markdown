@@ -20,13 +20,18 @@ Inspiration from [Lepture](https://github.com/lepture/editor) was the kickstart 
 $ bower install ngMarkdown -save
 ```
 
+- Include the required dependencies
+
+```html
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/marked/lib/marked.js"></script>
+```
+
+
 - Include the required libraries in your applications index page
 
 ```html
 <link rel="stylesheet" href="bower_components/angular-markdown/angular-markdown.css"/>
-
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/marked/lib/marked.js"></script>
 <script src="bower_components/angular-markdown/angular-markdown.js"></script>
 ```
 
