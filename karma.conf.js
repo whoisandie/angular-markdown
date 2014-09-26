@@ -20,7 +20,7 @@ module.exports = function(config) {
       'vendor/angular-mocks/angular-mocks.js',
       'src/scripts/codemirror/*.js',
       'src/scripts/editor.js',
-      'src/scriptsangular-markdown.js',
+      'src/scripts/angular-markdown.js',
       'test/*.spec.js'
     ],
 
